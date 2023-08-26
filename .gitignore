@@ -7,6 +7,8 @@
 
 # testing
 /coverage
+auth.json
+#https://playwright.dev/docs/codegen#preserve-authenticated-state
 
 # next.js
 /.next/
@@ -33,3 +35,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+/test-results/
+/playwright-report/
+/playwright/.cache/
