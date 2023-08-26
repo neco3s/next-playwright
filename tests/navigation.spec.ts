@@ -22,7 +22,7 @@ test.describe("navigation", () => {
 
     await page.getByRole("link", { name: "Link" }).click();
 
-    await expect(page).toHaveTitle("Links");
+    await expect(page).toHaveTitle("Link");
 
     await page.getByRole("link", { name: "Profile" }).click();
 
