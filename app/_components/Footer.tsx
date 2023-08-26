@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-export default function Footer() {
+function Footer() {
   const pathname = usePathname();
 
   return (
@@ -49,3 +49,5 @@ export default function Footer() {
     </ul>
   );
 }
+
+export default Footer;
