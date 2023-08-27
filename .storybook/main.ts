@@ -10,6 +10,12 @@ const config: StorybookConfig = {
     "@storybook/addon-essentials",
     "@storybook/addon-onboarding",
     "@storybook/addon-interactions",
+    {
+      name: "@storybook/addon-styling",
+      options: {
+        // If you are using @storybook/nextjs then leave the options object empty.
+      },
+    },
   ],
   framework: {
     name: "@storybook/nextjs",
