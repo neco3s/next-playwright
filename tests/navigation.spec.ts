@@ -8,10 +8,6 @@ test.describe("navigation", () => {
   test("browser native navigation work", async ({ page }) => {
     await expect(page).toHaveTitle("Home");
 
-    await page.goto("/link");
-
-    await expect(page).toHaveTitle("Link");
-
     await page.goto("/profile");
 
     await expect(page).toHaveTitle("Profile");
@@ -19,10 +15,6 @@ test.describe("navigation", () => {
 
   test("app router navigation work", async ({ page }) => {
     await expect(page).toHaveTitle("Home");
-
-    await page.getByRole("link", { name: "Link" }).click();
-
-    await expect(page).toHaveTitle("Link");
 
     await page.getByRole("link", { name: "Profile" }).click();
 
