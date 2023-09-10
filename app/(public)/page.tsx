@@ -7,7 +7,10 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <>
-      <p>Home ページです</p>
+      <p>
+        Home ページですHome ページですHome ページですHome ページですHome
+        ページですHome ページですHome ページですHome ページですHome ページです
+      </p>
       <div>こんにちは</div>
     </>
   );
