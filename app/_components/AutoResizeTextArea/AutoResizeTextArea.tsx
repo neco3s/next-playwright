@@ -9,7 +9,7 @@ interface AutoResizeTextAreaProps {
 
 const AutoResizeTextArea: React.FC<AutoResizeTextAreaProps> = ({
   id,
-  placeholder,
+  placeholder = "何があった？",
 }) => {
   const textAreaRef = useRef<HTMLTextAreaElement>(null);
   const [value, setValue] = useState("");
@@ -24,7 +24,7 @@ const AutoResizeTextArea: React.FC<AutoResizeTextAreaProps> = ({
       ref={textAreaRef}
       rows={1}
       value={value}
-      className="mb-5 border-2 p-3 pb-5 rounded-lg focus:ring-0 w-full resize-none overflow-hidden outline-none mt-2"
+      className="mb-2 border-2 p-2 pb-5 rounded-lg focus:ring-0 w-full resize-none overflow-hidden outline-none mt-2"
     />
   );
 };

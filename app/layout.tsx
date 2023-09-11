@@ -19,7 +19,7 @@ export default function RootLayout({
     <StatesProvider>
       <ThemesProvider>
         <HeaderContainer />
-        {children}
+        <div className="mt-[66px]">{children}</div>
         <FooterContainer />
       </ThemesProvider>
     </StatesProvider>

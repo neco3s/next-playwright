@@ -8,7 +8,7 @@ interface Props {
 
 function Header({ changeFontSize }: Props) {
   return (
-    <div className="flex justify-between w-full px-4 py-2 bg-gray-600 text-gray-100">
+    <div className="fixed top-0 left-0 z-50 flex justify-between w-full px-4 py-2 bg-gray-600 text-gray-100">
       <Link href="/">
         <Image
           src="/neco3coffee.png"
