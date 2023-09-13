@@ -1,9 +1,9 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { Noto_Sans_JP } from "next/font/google";
-import FooterContainer from "./_components/Footer/FooterContainer";
-
-const noto_sans_jp = Noto_Sans_JP({ subsets: ["latin"] });
+import FooterContainer from "@/app/_components/Footer/FooterContainer";
+import StatesProvider from "@/app/_states/statesProvider";
+import ThemesProvider from "@/app/_themes/themesProvider";
+import HeaderContainer from "@/app/_components/Header/HeaderContainer";
 
 export const metadata: Metadata = {
   title: "Next.js + TypeScript + Tailwind CSS + Playwright",
@@ -16,11 +16,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ja">
-      <body className={noto_sans_jp.className}>
-        {children}
+    <StatesProvider>
+      <ThemesProvider>
+        <HeaderContainer />
+        <div className="mt-[66px]">{children}</div>
         <FooterContainer />
-      </body>
-    </html>
+      </ThemesProvider>
+    </StatesProvider>
   );
 }
