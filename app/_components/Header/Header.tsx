@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
+import { UserButton } from "@clerk/nextjs";
 
 interface Props {
   changeFontSize: () => void;
@@ -18,9 +19,10 @@ function Header({ changeFontSize }: Props) {
         />
       </Link>
       <div className="flex items-center">
-        <button onClick={changeFontSize} className="active:text-black">
+        <button onClick={changeFontSize} className="active:text-black mr-4">
           <span>ぁあ</span>
         </button>
+        <UserButton afterSignOutUrl="/" />
       </div>
     </div>
   );

@@ -6,13 +6,18 @@ import {
 import { Button } from "../../../components/ui/button";
 import { Mail } from "lucide-react";
 import AutoResizeTextArea from "../../_components/AutoResizeTextArea/AutoResizeTextArea";
+import { currentUser } from "@clerk/nextjs";
+import type { User } from "@clerk/nextjs/api";
 
-const PostForm = () => {
+const PostForm = async () => {
+  const user: User | null = await currentUser();
+  console.log(user);
+
   return (
     <div className="flex flex-row border">
       <div className="w-1/6 flex justify-center mt-4">
         <Avatar>
-          <AvatarImage src="https://github.com/shadcn.png" />
+          <AvatarImage src={user?.imageUrl} />
           <AvatarFallback>CN</AvatarFallback>
         </Avatar>
       </div>
